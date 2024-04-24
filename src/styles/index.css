@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+#root{
+  width:100%
+}
+
+.bg-overlay-animate{
+  position: absolute;
+  z-index: 10;
+	width: 100%;
+}
+
+#star-animate {
+  position: absolute;
+  z-index: 0;
+	width: 2px;
+	height: 2px;
+  animation: star 1s linear infinite;
+}
+@keyframes star{
+  0%{
+    background-color: #2b2b2b;
+  }
+  25%{
+    background-color: #dadada;
+  }
+  50%{
+    background-color: #f8f8f8;
+  }
+  75%{
+    background-color: #dadada;
+  }
+  100%{
+    background-color: #2b2b2b;
+  }
+}
+.active-scroll-spy{
+  color:white
+}
+.font-jersey {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-mono{
+  font-family: JetBrains Mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+.textEffect{
+  font-size: 2vmin;
+  font-family: JetBrains Mono, monospace;
+  height: 5%;
+  min-height:35px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #e4bb68;
+}
+.textEffect h1{
+  height: 35px;
+  font-size: 25px;
+}
+.string {
+  height: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  overflow: hidden;
+}
+.textH1{
+  width:100%;
+  transform: translateY(0%);
+  animation: textEffects .5s alternate;
+}
+@keyframes textEffects{
+  0%{
+    transform: translateY(120%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+/* SMOKE */
+.introSvg #smoke-1 {
+  stroke-dasharray: 0, 10;
+  animation: smoke 6s ease infinite;
+}
+
+.introSvg #smoke-2 {
+  stroke-dasharray: 0, 10;
+  animation: smoke 6s 0.5s ease infinite;
+}
+
+@keyframes smoke {
+  0% { stroke-dasharray: 0, 10; }
+  50% { stroke-dasharray: 10, 0; }
+  100% { stroke-dasharray: 10, 0; opacity: 0; }
+}
+
+/* WRITING */
+.introSvg #line-1 {
+  opacity: 0;
+  animation: writing 0.5s linear forwards;
+}
+
+.introSvg #line-2 {
+  opacity: 0;
+  animation: writing 0.5s 1s linear forwards;
+}
+
+.introSvg #line-3 {
+  opacity: 0;
+  animation: writing 0.5s 1.5s linear forwards;
+}
+
+.introSvg #line-4 {
+  opacity: 0;
+  animation: writing 0.5s 2s linear forwards;
+}
+
+@keyframes writing {
+  0% { width: 0px; opacity: 1;}
+  100% { width: 14px; opacity: 1;}
+}

@@ -1,0 +1,64 @@
+@keyframes effectTextOpacity{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    20%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.textOpEffect{
+    animation: effectTextOpacity .4s linear forwards;
+}
+
+@keyframes effectTransY{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    20%{
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes effectTransYReverse{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    20%{
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.transY{
+    animation: effectTransY .4s linear forwards;
+}
+.transYReverse{
+    animation: effectTransYReverse .4s linear forwards;
+}
