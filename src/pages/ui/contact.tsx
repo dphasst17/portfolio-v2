@@ -9,7 +9,7 @@ const Contact = () => {
   return <div className="w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-zinc-800 to-zinc-700 text-black">
     <div className="form w-4/5 h-4/5 flex flex-wrap justify-center items-center  z-10 rounded-lg font-mono">
       <div className="w-full lg:w-2/5 lg:h-full flex flex-wrap content-center">
-        {contactData.map((c: ArrContact) => <Fade className="w-[48%] lg:w-2/5 m-1 cursor-pointer" direction="up" key={c.id}>
+        {contactData.map((c: ArrContact) => <Fade className="w-4/5 sm:w-[48%] lg:w-2/5 m-1 cursor-pointer" direction="up" key={c.id}>
           <Card radius="sm" className="w-full">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
               <c.icon />

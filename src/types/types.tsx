@@ -13,7 +13,6 @@ export interface ArrInfo {
 }
 export interface ArrSkill {
     name: string,
-    color: string,
     images: string,
 }
 export interface ArrProject {

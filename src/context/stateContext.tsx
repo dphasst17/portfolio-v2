@@ -15,13 +15,6 @@ import { IoMailOutline } from "react-icons/io5";
 //import images
 import htmlLogo from "../assets/Html-logo.png"
 import cssLogo from "../assets/Css-logo.png"
-import jsLogo from "../assets/Js-logo1.png"
-import tsLogo from "../assets/Typescript-logo.png"
-import reactLogo from "../assets/jsxIcon.png"
-import nextLogo from "../assets/nextLogo.png";
-import expressLogo from "../assets/ExpressJs-logo.png"
-import sqlLogo from "../assets/MySql-logo.png"
-import mongoLogo from "../assets/mongoDb.png"
 import gitLogo from "../assets/githubIcon.png"
 
 
@@ -65,52 +58,46 @@ export const StateProvider = ({children}:{children:React.ReactNode}) => {
     const skillData:ArrSkill[] = [
         {
             name:'HTML',
-            color:'',
             images:htmlLogo,
         },
         {
             name:'CSS',
-            color:'',
             images:cssLogo,
         },
         {
             name:'JAVASCRIPT',
-            color:'',
-            images:jsLogo,
+            images:'https://api.iconify.design/devicon/javascript.svg',
         },
         {
             name:'TYPESCRIPT',
-            color:'',
-            images:tsLogo,
+            images:'https://api.iconify.design/openmoji/typescript.svg',
+        },
+        {
+            name:'TAILWIND CSS',
+            images:'https://api.iconify.design/skill-icons/tailwindcss-dark.svg',
         },
         {
             name:'REACT JS',
-            color:'',
-            images:reactLogo,
+            images:'https://api.iconify.design/devicon/react.svg',
         },
         {
             name:'NEXT JS',
-            color:'',
-            images:nextLogo,
+            images:'https://api.iconify.design/devicon/nextjs.svg',
         },
         {
             name:'EXPRESS JS',
-            color:'',
-            images:expressLogo,
+            images:'https://api.iconify.design/skill-icons/expressjs-light.svg',
         },
         {
             name:'MYSQL',
-            color:'',
-            images:sqlLogo,
+            images:'https://api.iconify.design/logos/mysql.svg',
         },
         {
             name:'MONGO DB',
-            color:'',
-            images:mongoLogo,
+            images:'https://api.iconify.design/skill-icons/mongodb.svg',
         },
         {
             name:'GIT',
-            color:'',
             images:gitLogo,
         },
     ]

@@ -1,112 +1,106 @@
 import { Button } from "@nextui-org/react"
 import cv from "../../assets/CV-Dinh-Phat.pdf"
 import { Fade } from "react-awesome-reveal"
+import GitHubCalendar from "react-github-calendar"
 const Introduce = () => {
-  const data: string[] = ["Hi", "Im Phat", "Front-End developer"]
   const handleLink = (url: string) => {
     window.open(url, '_blank', 'noopener')
   }
-  return <div className='w-full h-screen flex flex-wrap items-center justify-center bg-gradient-to-b from-black to-zinc-950 text-zinc-700'>
-    <div className="z-10 w-full xl:w-2/5 p-4 h-3/5 xl:h-full flex flex-wrap content-center justify-center text-[12px] md:text-[18px] 2xl:text-[22px] text-white font-mono textOpEffect">
-      <Fade direction="left" className="w-full">
-        <div className="content w-full">
-          Hello, my name is Dinh Phat. I am currently studying at FPT Polytechnic and am a final year student. My target is to become a Fullstack Developer. I am passionate about providing solutions that add value to people’s lives, while also challenging me to improve my skills as a Front-End and Back-End developer.
+  return <div className='w-full h-auto md:h-screen flex flex-wrap items-center justify-center bg-gradient-to-b from-black to-zinc-950 text-zinc-700'>
+    <div className="z-10 w-[95%] p-4 h-full flex flex-wrap content-center justify-center text-[12px] md:text-[18px] 2xl:text-[22px] text-white font-mono textOpEffect">
+    <div className="z-10 w-full xl:w-2/5 h-[100px] xl:h-[50px] flex flex-wrap justify-start sm:justify-evenly">
+        <Button radius="sm" size="sm" color="primary"
+          onClick={() => { handleLink('https://www.linkedin.com/in/dinhphat17/') }}
+          className="w-auto min-w-[120px] m-1">Linkedin</Button>
+        <Button radius="sm" size="sm"
+          onClick={() => { handleLink('https://github.com/dphasst17') }}
+          className="w-auto min-w-[120px] m-1 bg-zinc-950 text-white">Github</Button>
+        <Button radius="sm" size="sm" color="danger"
+          className="w-auto min-w-[120px] m-1">
+          <a href={cv} download="CV-Dinh-Phat">Download CV</a>
+        </Button>
+      </div>
+      <div className="w-4/5 my-2 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
+        <div className="flex flex-row">
+          <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
+          <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
+        </div>
+        <div className="px-4 lg:px-8 py-5">
+          <div className="flex flex-row space-x-2">
+            <div className="h-3 w-3 rounded-full bg-red-400"></div>
+            <div className="h-3 w-3 rounded-full bg-orange-400"></div>
+            <div className="h-3 w-3 rounded-full bg-green-200"></div>
+          </div>
+        </div>
+        <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+          <code className="font-mono text-xs md:text-sm lg:text-base">
+            <div className="blink">
+              <span className="mr-2 text-pink-500">const</span>
+              <span className="mr-2 text-white">Developer</span>
+              <span className="mr-2 text-pink-500">=</span>
+              <span className="text-gray-400">{'{'}</span>
+            </div>
+            <div>
+              <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
+              <span className="text-gray-400">{`'`}</span>
+              <span className="text-amber-300">Dinh Phat</span>
+              <span className="text-gray-400">{`',`}</span>
+            </div>
+            <div className="ml-4 lg:ml-8 mr-2">
+              <span className=" text-white">skills:</span>
+              <span className="text-gray-400">{`['`}</span>
+              <span className="text-amber-300">React</span>
+              <span className="text-gray-400">{"', '"}</span>
+              <span className="text-amber-300">NextJS</span>
+              <span className="text-gray-400">{"', '"}</span>
+              <span className="text-amber-300">Tailwind CSS</span>
+              <span className="text-gray-400">{"', '"}</span>
+              <span className="text-amber-300">Express</span>
+              <span className="text-gray-400">{"', '"}</span>
+              <span className="text-amber-300">Express</span>
+              <span className="text-gray-400">{"', '"}</span>
+              <span className="text-amber-300">MySql</span>
+              <span className="text-gray-400">{"', '"}</span>
+              <span className="text-amber-300">MongoDB</span>
+              <span className="text-gray-400">{"', '"}</span>
+              <span className="text-amber-300">Docker</span>
+              {/* <span className="text-gray-400">{"', '"}</span>
+                <span className="text-amber-300">AWS</span> */}
+              <span className="text-gray-400">{"'],"}</span>
+            </div>
+            <div>
+              <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
+              <span className="text-orange-400">true</span>
+              <span className="text-gray-400">,</span>
+            </div>
+            <div>
+              <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
+              <span className="text-orange-400">true</span>
+              <span className="text-gray-400">,</span>
+            </div>
+            <div>
+              <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
+              <span className="text-orange-400">true</span>
+              <span className="text-gray-400">,</span>
+            </div>
 
-          <br /><br />I develop websites and applications using React, NextJS, Tailwind CSS, and ExpressJS. I always strive to improve myself through each project.
-
-          <br /><br />I am a dedicated, dream-chasing, hard-working, and results-oriented person, always looking to achieve the best version of myself.
+            <div><span className="text-gray-400">{`};`}</span></div>
+          </code>
         </div>
-        <div className="z-10 w-full h-[50px] my-2 flex flex-wrap justify-start sm:justify-evenly">
-          <Button radius="sm" size="sm" color="primary"
-            onClick={() => { handleLink('https://www.linkedin.com/in/dinhphat17/') }}
-            className="w-auto min-w-[120px] m-1">Linkedin</Button>
-          <Button radius="sm" size="sm"
-            onClick={() => { handleLink('https://github.com/dphasst17') }}
-            className="w-auto min-w-[120px] m-1 bg-zinc-950 text-white">Github</Button>
-          <Button radius="sm" size="sm" color="danger"
-            className="w-auto min-w-[120px] m-1">
-            <a href={cv} download="CV-Dinh-Phat">Download CV</a>
-          </Button>
-        </div>
+      </div>
+  
+      <Fade className="w-full sm:w-1/4 min-w-[200px] h-auto min-h-[150] flex items-center">
+        <img className="w-full h-full mx-auto" src="https://camo.githubusercontent.com/299bb0b431fd8634a5257d1285b03006eb998915f43c5aca67131fa494342f07/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d647068617373743137267468656d653d746f6b796f6e6967687426686964655f626f726465723d747275652673686f775f69636f6e733d7472756526686964655f7469746c653d66616c73652664697361626c655f616e696d6174696f6e733d66616c736526686964655f72616e6b3d66616c73652672616e6b5f69636f6e3d67697468756226686964653d2673686f773d7072735f6d657267656425324364697363757373696f6e735f73746172746564266c6f63616c653d454e" />
+        <img className="w-full h-full md:h-4/5 mx-auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dphasst17&layout=compact&theme=tokyonight&hide_border=true&&langs_count=8"/>
       </Fade>
-    </div>
-    <div className="z-10 w-full xl:w-2/5 h-2/5 xl:h-full flex flex-col items-center justify-center">
-      <Fade direction="right">
-        <div className="textEffect textOpEffect hidden sm:flex ">
-          <h1>System<span style={{ color: 'white' }}>.<span style={{ color: '#e06c75' }}>out</span>.</span><span style={{ color: '#61afef' }}>println</span>("</h1>
-          <div className="string transition-width">
-            <h1 className="w-full textH1 h-full">{data[0]}</h1>
-          </div>
-          <h1 className="closure">");</h1>
-        </div>
-        <div className="textEffect textOpEffect hidden sm:flex">
-          <h1>
-            <span style={{ color: '#61afef' }}>console</span>
-            <span style={{ color: 'white' }}>.</span>
-            <span style={{ color: '#e06c75' }}>log</span>("
-          </h1>
-          <div className="string transition-width">
-            <h1 className="w-full textH1 h-full" style={{ color: '#61afef' }}>{data[1]}</h1>
-          </div>
-          <h1 className="closure">");</h1>
-        </div>
-        <div className="textEffect textOpEffect hidden sm:flex">
-          <h1>
-            <span style={{ color: '#61afef' }}>echo</span> "
-          </h1>
-          <div className="string transition-width">
-            <h1 className="w-full textH1 h-full" style={{ color: '#61afef' }}>{`<h1>`}{data[2]}{`</h1>`}</h1>
-          </div>
-          <h1 className="closure">";</h1>
-        </div>
+      <Fade className="wfull sm:w-2/5 h-auto" >
+        <img className="h-full mx-auto" src="https://camo.githubusercontent.com/1a64b1cd03c4d47d5ba5b09d95a3b6f0a509bd8bb07a9a051ab25db21839aa20/68747470733a2f2f6769746875622d70726f66696c652d73756d6d6172792d63617264732e76657263656c2e6170702f6170692f63617264732f70726f66696c652d64657461696c733f757365726e616d653d647068617373743137267468656d653d746f6b796f6e69676874" />
       </Fade>
-      <Fade className="w-full h-2/4 sm:h-2/4" direction="right">
-        <svg className="w-full h-full" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g id="study">
-            <rect className="w-full h-2/4" />
-            <g id="smoke">
-              <path id="smoke-2" d="M9 21L9.55279 19.8944C9.83431 19.3314 9.83431 18.6686 9.55279 18.1056L9 17L8.44721 15.8944C8.16569 15.3314 8.16569 14.6686 8.44721 14.1056L9 13" stroke="#797270" />
-              <path id="smoke-1" d="M6.5 22L7.05279 20.8944C7.33431 20.3314 7.33431 19.6686 7.05279 19.1056L6.5 18L5.94721 16.8944C5.66569 16.3314 5.66569 15.6686 5.94721 15.1056L6.5 14" stroke="#797270" />
-            </g>
-            <g id="laptop">
-              <rect id="laptop-base" x="17" y="28" width="20" height="3" fill="#F3F3F3" stroke="#453F3C" strokeWidth="2" />
-              <rect id="laptop-screen" x="18" y="17" width="18" height="11" fill="#5A524E" stroke="#453F3C" strokeWidth="2" />
-              <rect id="line-1" x="20" y="19" width="14" height="1" fill="#F78764" />
-              <rect id="line-2" x="20" y="21" width="14" height="1" fill="#F9AB82" />
-              <rect id="line-3" x="20" y="23" width="14" height="1" fill="#F78764" />
-              <rect id="line-4" x="20" y="25" width="14" height="1" fill="#F9AB82" />
-            </g>
-            <g id="cup">
-              <rect id="Rectangle 978" x="5" y="24" width="5" height="7" fill="#CCC4C4" stroke="#453F3C" strokeWidth="2" />
-              <path id="Ellipse 416" d="M11 28C12.1046 28 13 27.1046 13 26C13 24.8954 12.1046 24 11 24" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 996" x="6" y="25" width="3" height="1" fill="#D6D2D1" />
-            </g>
-            <g id="books">
-              <rect id="Rectangle 984" x="58" y="27" width="4" height="14" transform="rotate(90 58 27)" fill="#B16B4F" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 985" x="56" y="23" width="4" height="14" transform="rotate(90 56 23)" fill="#797270" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 986" x="60" y="19" width="4" height="14" transform="rotate(90 60 19)" fill="#F78764" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 993" x="47" y="20" width="12" height="1" fill="#F9AB82" />
-              <rect id="Rectangle 994" x="43" y="24" width="12" height="1" fill="#54504E" />
-              <rect id="Rectangle 995" x="45" y="28" width="12" height="1" fill="#804D39" />
-            </g>
-            <g id="desk">
-              <rect id="Rectangle 973" x="4" y="31" width="56" height="5" fill="#797270" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 987" x="10" y="36" width="30" height="6" fill="#797270" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 975" x="6" y="36" width="4" height="24" fill="#797270" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 974" x="40" y="36" width="18" height="24" fill="#797270" stroke="#453F3C" strokeWidth="2" />
-              <line id="Line 129" x1="40" y1="48" x2="58" y2="48" stroke="#453F3C" strokeWidth="2" />
-              <line id="Line 130" x1="22" y1="39" x2="28" y2="39" stroke="#453F3C" strokeWidth="2" />
-              <line id="Line 142" x1="46" y1="42" x2="52" y2="42" stroke="#453F3C" strokeWidth="2" />
-              <line id="Line 131" x1="46" y1="54" x2="52" y2="54" stroke="#453F3C" strokeWidth="2" />
-              <rect id="Rectangle 988" x="11" y="37" width="28" height="1" fill="#54504E" />
-              <rect id="Rectangle 992" x="5" y="32" width="54" height="1" fill="#9E9492" />
-              <rect id="Rectangle 989" x="7" y="37" width="2" height="1" fill="#54504E" />
-              <rect id="Rectangle 990" x="41" y="37" width="16" height="1" fill="#54504E" />
-              <rect id="Rectangle 991" x="41" y="49" width="16" height="1" fill="#54504E" />
-              <line id="Line 143" y1="60" x2="64" y2="60" stroke="#453F3C" strokeWidth="2" />
-            </g>
-          </g>
-        </svg>
+      <Fade className="w-full h-auto flex justify-center items-center my-1" direction="up">
+        <GitHubCalendar
+            username="dphasst17"
+            blockSize={14}
+          />
       </Fade>
     </div>
   </div>
